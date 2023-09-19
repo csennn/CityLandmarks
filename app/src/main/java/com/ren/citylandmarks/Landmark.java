@@ -1,6 +1,8 @@
 package com.ren.citylandmarks;
 
-public class Landmark {
+import java.io.Serializable;
+
+public class Landmark implements Serializable {
     String name;
     String city;
     int image;
