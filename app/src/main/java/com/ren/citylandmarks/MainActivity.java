@@ -1,6 +1,7 @@
 package com.ren.citylandmarks;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -42,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
         landmarkArrayList.add(eiffeltower);
         landmarkArrayList.add(pisatower);
 
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        AdapterLandmark adapterLandmark = new AdapterLandmark(landmarkArrayList);
+        binding.recyclerView.setAdapter(adapterLandmark);
+
+
+        /*
         //ListView
         //Adapter
         //mapping
@@ -59,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+         */
+
+
 
 
 
